@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "items": {
+            "description": "Menu/SubMenu items",
+            "type": "array",
+            "items": {
+                "description": "Menu item",
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "description": "Menu item title",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "Menu item url",
+                        "type": "string"
+                    },
+                    "target": {
+                        "description": "Menu item target",
+                        "enum": ["samePage", "newTab"]
+                    },
+                    "style": {
+                        "description": "Menu item style",
+                        "type": "object"
+                    },
+                    "hoverStyle": {
+                        "description": "Menu item style on hover",
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    }
+}
+  
