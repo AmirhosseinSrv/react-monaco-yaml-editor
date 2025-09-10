@@ -1,24 +1,27 @@
-declare module 'monaco-editor/esm/vs/editor/common/services/languageFeatures.js' {
+declare module "monaco-editor/esm/vs/editor/common/services/languageFeatures.js" {
   export const ILanguageFeaturesService: { documentSymbolProvider: unknown };
 }
-  
-declare module 'monaco-editor/esm/vs/editor/contrib/documentSymbols/browser/outlineModel.js' {
-  import { editor, languages } from 'monaco-editor';
+
+declare module "monaco-editor/esm/vs/editor/contrib/documentSymbols/browser/outlineModel.js" {
+  import { editor, languages } from "monaco-editor";
 
   export abstract class OutlineModel {
-    static create(registry: unknown, model: editor.ITextModel): Promise<OutlineModel>;
+    static create(
+      registry: unknown,
+      model: editor.ITextModel
+    ): Promise<OutlineModel>;
 
     asListOfDocumentSymbols(): languages.DocumentSymbol[];
   }
 }
-  
-declare module 'monaco-editor/esm/vs/editor/standalone/browser/standaloneServices.js' {
+
+declare module "monaco-editor/esm/vs/editor/standalone/browser/standaloneServices.js" {
   export const StandaloneServices: {
     get: (id: unknown) => { documentSymbolProvider: unknown };
   };
 }
-  
-declare module '*.json' {
+
+declare module "*.json" {
   declare const uri: string;
   export default uri;
 }
